@@ -1,0 +1,21 @@
+#!/bin/sh
+
+DATASET=sintel
+METHOD=flowsac
+SUBSET=all
+
+LIST=../../data/$DATASET-train/list-$SUBSET.txt
+OUTFILE=./results/$DATASET-$METHOD-$SUBSET
+FLAGS=-fast -r 1
+
+echo $DATASET-$METHOD-$SUBSET
+
+./batch $LIST flowfields $DATASET -method $METHOD -o $OUTFILE-ff.txt $FLAGS
+
+#./batch $LIST cpm $DATASET -method $METHOD -o $OUTFILE-cpm.txt $FLAGS
+
+#./batch $LIST dcflow $DATASET -method $METHOD -o $OUTFILE-dcf.txt $FLAGS
+
+#./batch $LIST discreteflow $DATASET -method $METHOD -o $OUTFILE-df.txt $FLAGS
+
+
