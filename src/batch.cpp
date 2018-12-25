@@ -108,6 +108,12 @@ int main(int argc, char *argv[])
 
 		std::string file = args.getd<std::string>("o", "./results.txt");
 		FILE *fp = fopen(file.c_str(), "w");
+		if (!fp)
+		{
+			printf("error:failed to open file %s\n", file.c_str());
+			return -1;
+		}
+
 		for (size_t i = 0; i < vResults.size(); ++i)
 		{
 			fprintf(fp,"%04d: aee=%.2lf,time=%.2lf\t%s\n", (int)i, vResults[i][0], vResults[i][1], pairs[i].src.c_str());

@@ -1,21 +1,21 @@
 #!/bin/sh
 
 # name of the dataset ( sintel or kitti), some parameters will be set according to the dataset name
-DATASET=kitti
+DATASET=sintel
 
 # estimation method (flowsac | epicflow | ricflow)
-METHOD=flowsac
+#METHOD=flowsac
 
 #use this line for flowsac-fast
-#METHOD="flowsac -fast"
+METHOD="flowsac -fast"
 
 #optional set more parameters
 #METHOD="flowsac -fast -r 10 "
 
 #list of flow pairs
 SUBSET=x
-#LIST=../data/$DATASET-train/list-$SUBSET.txt
-LIST=/fan/data/FlowSAC/data/$DATASET-train/list-$SUBSET.txt
+LIST=../data/$DATASET-train/list-$SUBSET.txt
+#LIST=/fan/data/FlowSAC/data/$DATASET-train/list-$SUBSET.txt
 
 #file name for writing the results
 OUTFILE=../data/results/$DATASET-[$METHOD]-$SUBSET
