@@ -293,7 +293,6 @@ Mat2f CFlowSAC::operator()(const std::string &srcFile, const std::string &tarFil
 	std::string scoreMethod = args.getd<std::string>("score", "SOD");
 	bool fastMode = args.getd<bool>("fast", false);
 	double R = args.getd<float>("r", 10);
-
 	Mat3b src = imread(srcFile), tar = imread(tarFile);
 	Mat1f sedEdge = readEdgeFile(edgeFile, src.size());
 
@@ -304,7 +303,6 @@ Mat2f CFlowSAC::operator()(const std::string &srcFile, const std::string &tarFil
 	Mat1i region = segmentImage(ucm, matches, 0, 30, ucmT);
 
 	std::unique_ptr<Interpolator> interp(createEpicInterpolator(src, srcFile, tar, tarFile, sedEdge, datasetName));
-	
 
 	std::unique_ptr<FlowScore> score(
 		scoreMethod == "SOD" ? (FlowScore*)new SOD(src, tar, region, isKitti ? 1.0 : 0) : //for kitti dataset, smooth the images first

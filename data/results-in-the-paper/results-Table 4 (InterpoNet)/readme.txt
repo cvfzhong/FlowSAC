@@ -1,0 +1,1 @@
+Each row is:  ID, AEE of FlowFields, CPM, DCFlow, DiscreteFlow

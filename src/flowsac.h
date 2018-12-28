@@ -10,6 +10,7 @@ public:
 	float x0, y0;
 	float x1, y1;
 
+	float err;
 public:
 	Match()
 	{}
@@ -51,3 +52,4 @@ public:
 	Mat2f operator()(const std::string &srcFile, const std::string &tarFile, const std::string &matchFile, const std::string &ucmFile, const std::string &edgeFile, const std::string &datasetName, ff::ArgSet &args);
 };
 
+ 

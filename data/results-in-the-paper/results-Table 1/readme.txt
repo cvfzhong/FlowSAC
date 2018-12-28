@@ -1,0 +1,1 @@
+Each row is:  ID, final(L=10) AEE,  AEE from L=0(init.) to L=10

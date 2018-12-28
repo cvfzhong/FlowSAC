@@ -1,0 +1,1 @@
+The layout of rows and cols are the same as that in the paper.

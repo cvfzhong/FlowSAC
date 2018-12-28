@@ -229,10 +229,9 @@ void  readMatches(std::vector<Match> &matches, const std::string &file)
 
 	Match m;
 	char buf[1024];
-	float score = 0;
 	while (fgets(buf, sizeof(buf), fp))
 	{
-		if (sscanf(buf, "%f %f %f %f %f", &m.x0, &m.y0, &m.x1, &m.y1, &score) >= 4)
+		if (sscanf(buf, "%f %f %f %f %f", &m.x0, &m.y0, &m.x1, &m.y1, &m.err) >= 4)
 			vm.push_back(m);
 	}
 
