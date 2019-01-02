@@ -2,7 +2,8 @@
 
 This is a reference implementation of **FlowSAC**, a robust method for estimating dense flow from a set of sparse matches that may be contaminated with significant outliers.
 
-This repository can be used to reproduce the main experimental results in the paper. A copy of raw detailed results can be found at `./data/results-in-the-paper/`. Please visit our [project page](...) for the required data.
+This repository can be used to reproduce the main experimental results in the paper. A copy of raw detailed results can be found at `./data/results-in-the-paper/`. Please visit our [project page](http://irc.cs.sdu.edu.cn/~fanzhong/SAC/
+) for the required data.
 
 
 ## Installation
@@ -72,7 +73,7 @@ flowsac2 ../data/sintel-train/list-all.txt dcflow sintel -method flowsac -o resu
 
 ### 3. The robustness experiment
 
-To run the robustness experiment (Table 6 in the paper), please first download [sintel-train-matchx](...), which contains the data to generate matches of different outlier ratio, for the matching methods of DCFlow, FlowFields1 (one-way crosschecking), FlowFields2(two-way crosschecking), CPM, and DiscreteFlow. Put the decompressed `matchx` folder to `./data/sintel-train/`. The list file `sintel-train/list-hard.txt` is the Sintel-hard dataset as described in the paper.
+To run the robustness experiment (Table 6 in the paper), please first download [sintel-train-matchx](http://irc.cs.sdu.edu.cn/~fanzhong/SAC/files/sintel_train_matchx.zip), which contains the data to generate matches of different outlier ratio, for the matching methods of DCFlow, FlowFields1 (one-way crosschecking), FlowFields2(two-way crosschecking), CPM, and DiscreteFlow. Put the decompressed `matchx` folder to `./data/sintel-train/`. The list file `sintel-train/list-hard.txt` is the Sintel-hard dataset as described in the paper.
 
 As an example, you can run the experiment for DCFlow matches as:
 ```
